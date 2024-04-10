@@ -1,0 +1,78 @@
+:root {
+    --primary-bg-light: #f2f2f2;
+    --primary-bg-dark: #212121;
+    --primary-text-light: #000000;
+    --primary-text-dark: #ffffff;
+    --secondary-bg-light: #6900d1;
+    --secondary-bg-dark: #3700a3;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--primary-bg-light);
+    color: var(--primary-text-light);
+    transition: background 0.3s, color 0.3s;
+}
+
+.header {
+    background: var(--secondary-bg-light);
+}
+
+.navbar {
+    padding-top: 20px !important;
+}
+
+.nav-link {
+    color: var(--primary-text-dark) !important;
+    font-size: 16px !important;
+    padding: 0 0 5px 0;
+    display: unset;
+}
+
+h1 {
+    font-size: 30px;
+    letter-spacing: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid var(--primary-text-light);
+    color: var(--primary-text-dark);
+    animation: typing 2s steps(40, end), blink-caret 0.5s step-end infinite;
+}
+
+/* Keyframes for the typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Keyframes for the blinking cursor animation */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+}
+
+/* Dark theme styles */
+body.dark-theme {
+    background: var(--primary-bg-dark);
+    color: var(--primary-text-dark);
+}
+
+.header.dark-theme {
+    background: var(--secondary-bg-dark);
+}
+
+.nav-link.dark-theme {
+    color: var(--primary-text-dark) !important;
+}
+
+h1.dark-theme {
+    border-right: 1px solid var(--primary-text-dark);
+    color: var(--primary-text-dark);
+}
